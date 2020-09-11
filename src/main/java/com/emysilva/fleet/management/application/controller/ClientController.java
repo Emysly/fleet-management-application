@@ -1,11 +1,7 @@
 package com.emysilva.fleet.management.application.controller;
 
 import com.emysilva.fleet.management.application.model.Client;
-import com.emysilva.fleet.management.application.model.Invoice;
-import com.emysilva.fleet.management.application.model.InvoiceStatus;
 import com.emysilva.fleet.management.application.service.ClientService;
-import com.emysilva.fleet.management.application.service.InvoiceService;
-import com.emysilva.fleet.management.application.service.InvoiceStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
