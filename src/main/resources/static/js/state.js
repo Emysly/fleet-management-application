@@ -10,7 +10,7 @@ $('document').ready(function() {
 		$.get(href, function(state, status){
 			$('#idEdit').val(state.id);
 			$('#ddlCountryEdit').val(state.countryid);
-			$('#capitalEdit').val(state.capipal);
+			$('#capitalEdit').val(state.capital);
 			$('#codeEdit').val(state.code);
 			$('#nameEdit').val(state.name);
 			$('#detailsEdit').val(state.details);
@@ -25,6 +25,8 @@ $('document').ready(function() {
 			$('#idDetails').val(state.id);
 			$('#ddlCountryDetails').val(state.countryid);			
 			$('#nameDetails').val(state.name);
+			$('#codeDetails').val(state.code);
+			$('#capitalDetails').val(state.capital);
 			$('#detailsDetails').val(state.details);
 			$('#lastModifiedByDetails').val(state.lastModifiedBy);
 			//$('#lastModifiedDateDetails').val(state.lastModifiedDate.substr(0,19).replace("T", " "));

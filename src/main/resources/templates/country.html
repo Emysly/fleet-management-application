@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8">
@@ -460,17 +460,16 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
     </div>
   </section>
   <!-- container section end --> 
   
-  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addexampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New Country</h5>
+        <h5 class="modal-title" id="addexampleModalLabel">New Country</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -479,34 +478,34 @@
         <form th:action="@{/countries/addNew}" method="post">
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Description:</label>
-            <input type="text" class="form-control" id="recipient-name" name="description">
+            <label for="add-recipient-description" class="col-form-label">Description:</label>
+            <input type="text" class="form-control" id="add-recipient-description" name="description">
           </div>
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Capital:</label>
-            <input type="text" class="form-control" id="recipient-name" name="capital">
+            <label for="add-recipient-capital" class="col-form-label">Capital:</label>
+            <input type="text" class="form-control" id="add-recipient-capital" name="capital">
           </div>
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Code:</label>
-            <input type="text" class="form-control" id="recipient-name" name="code">
+            <label for="add-recipient-code" class="col-form-label">Code:</label>
+            <input type="text" class="form-control" id="add-recipient-code" name="code">
           </div>
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Continent:</label>
-            <input type="text" class="form-control" id="recipient-name" name="continent">
+            <label for="add-recipient-continent" class="col-form-label">Continent:</label>
+            <input type="text" class="form-control" id="add-recipient-continent" name="continent">
           </div>                    
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nationality:</label>
-            <input type="text" class="form-control" id="recipient-name" name="nationality">
+            <label for="add-recipient-nationality" class="col-form-label">Nationality:</label>
+            <input type="text" class="form-control" id="add-recipient-nationality" name="nationality">
           </div>       
           
         
           <div class="form-group">
           <button type="submit" class="btn btn-primary">Submit</button>        
-        </div>             
+          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -526,34 +525,33 @@
         </button>
       </div>
       <div class="modal-body">
-        <form th:action="@{/countries/update}" method="put">     
+        <form th:action="@{/countries/update}" method="put">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Description:</label>
-            <input type="text" class="form-control" id="idEdit" name="id" readonly>
+            <input type="hidden" class="form-control" id="idEdit" name="id" readonly>
           </div>
-        
+
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Description:</label>
+            <label class="col-form-label">Description:</label>
             <input type="text" class="form-control" id="descriptionEdit" name="description">
           </div>
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Capital:</label>
+            <label class="col-form-label">Capital:</label>
             <input type="text" class="form-control" id="capitalEdit" name="capital">
           </div>
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Code:</label>
+            <label class="col-form-label">Code:</label>
             <input type="text" class="form-control" id="codeEdit" name="code">
           </div>
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Continent:</label>
+            <label class="col-form-label">Continent:</label>
             <input type="text" class="form-control" id="continentEdit" name="continent">
           </div>                    
         
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nationality:</label>
+            <label class="col-form-label">Nationality:</label>
             <input type="text" class="form-control" id="nationalityEdit" name="nationality">
           </div>       
           
