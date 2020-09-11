@@ -1,9 +1,7 @@
 package com.emysilva.fleet.management.application.controller;
 
-import com.emysilva.fleet.management.application.model.Client;
-import com.emysilva.fleet.management.application.model.Employee;
-import com.emysilva.fleet.management.application.service.ClientService;
-import com.emysilva.fleet.management.application.service.EmployeeService;
+import com.emysilva.fleet.management.application.model.*;
+import com.emysilva.fleet.management.application.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,11 +13,27 @@ import java.util.List;
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
+    @Autowired
+    private JobTitleService jobTitleService;
+    @Autowired
+    private CountryService countryService;
+    @Autowired
+    private StateService stateService;
+    @Autowired
+    private EmployeeTypeService employeeTypeService;
 
     @GetMapping("/employees")
     public String getEmployees(Model model) {
         List<Employee> employees = employeeService.getEmployees();
+        List<JobTitle> jobTitles = jobTitleService.getJobTitles();
+        List<Country> countries = countryService.getCountries();
+        List<State> states = stateService.getStates();
+        List<EmployeeType> employeeTypes = employeeTypeService.getEmployeeTypes();
         model.addAttribute("employees", employees);
+        model.addAttribute("jobTitles", jobTitles);
+        model.addAttribute("countries", countries);
+        model.addAttribute("states", states);
+        model.addAttribute("employeeTypes", employeeTypes);
         return "employee";
     }
 

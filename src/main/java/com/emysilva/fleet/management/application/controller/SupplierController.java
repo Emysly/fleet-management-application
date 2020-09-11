@@ -1,8 +1,10 @@
 package com.emysilva.fleet.management.application.controller;
 
 import com.emysilva.fleet.management.application.model.Country;
+import com.emysilva.fleet.management.application.model.State;
 import com.emysilva.fleet.management.application.model.Supplier;
 import com.emysilva.fleet.management.application.service.CountryService;
+import com.emysilva.fleet.management.application.service.StateService;
 import com.emysilva.fleet.management.application.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,12 +19,20 @@ public class SupplierController {
 
     @Autowired
     private SupplierService supplierService;
+    @Autowired
+    private CountryService countryService;
+    @Autowired
+    private StateService stateService;
 
 
     @GetMapping("/suppliers")
     public String getSuppliers(Model model) {
         List<Supplier> suppliers = supplierService.getSuppliers();
+        List<Country> countries = countryService.getCountries();
+        List<State> states = stateService.getStates();
         model.addAttribute("suppliers", suppliers);
+        model.addAttribute("countries", countries);
+        model.addAttribute("states", states);
         return "supplier";
     }
 

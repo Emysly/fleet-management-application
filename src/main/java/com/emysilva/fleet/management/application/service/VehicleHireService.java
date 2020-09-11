@@ -27,7 +27,7 @@ public class VehicleHireService {
         return vehicleHireRepository.findById(id).orElseThrow(() -> new NoSuchDataException("vehicle hire with id: " + id + "not found"));
     }
 
-    public void deleteClient(int id) {
+    public void deleteVehicleHire(int id) {
         VehicleHire vehicleHireToDelete = vehicleHireRepository.findById(id).orElseThrow(() -> new NoSuchDataException("vehicle hire with id: " + id + "not found"));
         vehicleHireRepository.delete(vehicleHireToDelete);
     }
