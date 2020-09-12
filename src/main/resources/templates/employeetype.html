@@ -266,13 +266,13 @@
           <!-- alert notification end-->
           <!-- user login dropdown start-->
           <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" th:src="@{'/img/photos/' + ${#authentication.getPrincipal().getUsername()} + '.jpg'}" height="38" width="38">
                             </span>
-                            <span class="username">Jenifer Smith</span>
-                            <b class="caret"></b>
-                        </a>
+                  <span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Guest</span>
+                  <b class="caret"></b>
+              </a>
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
@@ -457,17 +457,7 @@
       </section>
     </section>
     <!--main content end-->
-    <div class="text-right">
-      <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </div>
+
   </section>
   <!-- container section end -->
   <!-- javascripts -->

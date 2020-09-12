@@ -266,13 +266,13 @@
           <!-- alert notification end-->
           <!-- user login dropdown start-->
           <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" th:src="@{'/img/photos/' + ${#authentication.getPrincipal().getUsername()} + '.jpg'}" height="38" width="38">
                             </span>
-                            <span class="username">Jenifer Smith</span>
-                            <b class="caret"></b>
-                        </a>
+                  <span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Guest</span>
+                  <b class="caret"></b>
+              </a>
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
@@ -442,8 +442,8 @@
                   </tr>
 				 <tr th:each="employee:${employees}">	
 				      <td>
-						 <a id="photoButton" th:href="@{'/img/photos/' + ${employee.username} +'.jpg'}">
-						 <img th:src="@{'/img/photos/' + ${employee.username} +'.jpg'}" width="40" height="40">
+						 <a id="photoButton" th:href="@{'/img/photos/' + ${employee.othername} +'.jpg'}">
+						 <img th:src="@{'/img/photos/' + ${employee.othername} +'.jpg'}" width="40" height="40">
 						 </a>
 					 </td>
 					<td th:text="${employee.firstname} + ' ' + ${employee.lastname}">Fullname</td>
@@ -512,7 +512,7 @@
 					    <select class="form-control" id="ddlTitleAdd" name="title">
 		        	       <option>-SELECT-</option>			    					  					    					    
 				          <option value="MALE">Mr.</option>
- 						  <option value="FEMAL">Ms.</option>
+ 						  <option value="FEMALE">Ms.</option>
  					    </select>				    
 				    </div>
 				  </div>

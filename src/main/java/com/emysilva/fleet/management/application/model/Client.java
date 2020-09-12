@@ -21,12 +21,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Client {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
-	
+
 	private String name;
 	private String address;
 	private String city;
@@ -34,16 +34,16 @@ public class Client {
 	private String mobile;
 	private String website;
 	private String email;
-	
+
 	@ManyToOne
 	@JoinColumn(name="countryid", insertable=false, updatable=false)
 	private Country country;
 	private Integer countryid;
-	
+
 	@ManyToOne
 	@JoinColumn(name="stateid", insertable=false, updatable=false)
-	private State state;	
+	private State state;
 	private Integer stateid;
-	
+
 	private String details;
 }
