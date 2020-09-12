@@ -467,17 +467,6 @@
       </section>
     </section>
     <!--main content end-->
-    <div class="text-right">
-      <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </div>
   </section>
   <!-- container section end -->
   
@@ -865,9 +854,63 @@
     </div>
   </div>
  </form>
-</div>  
+</div>
 
- <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+  <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <form>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="editModalLabel">Contact Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+
+                      <div class="form-group">
+                          <input type="hidden" class="form-control" id="idDetails" name="id" readonly>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-form-label">Description:</label>
+                          <input type="text" class="form-control" id="descriptionDetails" name="description" readonly>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-form-label">Details:</label>
+                          <input type="text" class="form-control" id="detailsDetails" name="details" readonly>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-form-label">Created By:</label>
+                          <input type="text" class="form-control" id="createdByDetails" name="createdBy" readonly>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-form-label">Created Date:</label>
+                          <input type="text" class="form-control" id="createdDateDetails" name="createdDate" readonly>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-form-label">Last Updated By:</label>
+                          <input type="text" class="form-control" id="lastModifiedByDetails" name="lastModifiedBy" readonly>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-form-label">Last Updated On:</label>
+                          <input type="text" class="form-control" id="lastModifiedDateDetails" name="lastModifiedDate" readonly>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

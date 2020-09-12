@@ -26,6 +26,8 @@ $('document').ready(function() {
 			$('#idDetails').val(country.id);
 			$('#descriptionDetails').val(country.description);
 			$('#codeDetails').val(country.code);
+			$('#createdByDetails').val(country.createdBy);
+			$('#createdDateDetails').val(country.createdDate);
 			$('#lastModifiedByDetails').val(country.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(country.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			

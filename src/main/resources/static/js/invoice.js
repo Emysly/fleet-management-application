@@ -30,6 +30,8 @@ $('document').ready(function() {
 			$('#invoiceDateDetails').val(invoiceDate);
 			$('#ddlStatusDetails').val(invoice.invoicestatusid);
 			$('#remarksDetails').val(invoice.remarks);
+//			$('#createdByDetails').val(invoice.createdByDetails);
+//			$('#createdDateDetails').val(invoice.createdDateDetails);
 			$('#lastModifiedByDetails').val(invoice.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(invoice.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
