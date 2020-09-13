@@ -24,16 +24,10 @@ $('document').ready(function() {
 		var href= $(this).attr('href');		
 		$.get(href, function(invoice, status){
 			$('#idDetails').val(invoice.id);
-			$('#ddlClientDetails').val(invoice.clientid);			
-			
-			var invoiceDate = invoice.invoiceDate.substr(0,10);
-			$('#invoiceDateDetails').val(invoiceDate);
+			$('#ddlClientDetails').val(invoice.clientid);
+			$('#invoiceDateDetails').val(invoice.invoiceDate.substr(0,10));
 			$('#ddlStatusDetails').val(invoice.invoicestatusid);
 			$('#remarksDetails').val(invoice.remarks);
-//			$('#createdByDetails').val(invoice.createdByDetails);
-//			$('#createdDateDetails').val(invoice.createdDateDetails);
-			$('#lastModifiedByDetails').val(invoice.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(invoice.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	

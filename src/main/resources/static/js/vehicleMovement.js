@@ -36,8 +36,10 @@ $('document').ready(function() {
 			$('#date1Details').val(date1);
 			$('#date2Details').val(date2);
 			$('#remarksDetails').val(vehicleMovement.remarks);
-		//	$('#lastModifiedByDetails').val(vehicleMovement.lastModifiedBy);
-		//	$('#lastModifiedDateDetails').val(vehicleMovement.lastModifiedDate.substr(0,19).replace("T", " "));
+			$('#createdByDetails').val(vehicleMovement.createdBy);
+            $('#createdDateDetails').val(vehicleMovement.createdDate.substr(0,19).replace("T", " "));
+			$('#lastModifiedByDetails').val(vehicleMovement.lastModifiedBy);
+			$('#lastModifiedDateDetails').val(vehicleMovement.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	

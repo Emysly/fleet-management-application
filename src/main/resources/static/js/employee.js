@@ -42,6 +42,8 @@ $('document').ready(function() {
 			$('#idDetails').val(employee.id);
 			$('#descriptionDetails').val(employee.description);
 			$('#detailsDetails').val(employee.details);
+			$('#createdByDetails').val(employee.createdBy);
+            $('#createdDateDetails').val(employee.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(employee.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(employee.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			

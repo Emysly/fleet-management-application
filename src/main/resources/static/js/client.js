@@ -22,12 +22,14 @@ $('document').ready(function() {
 	$('.table #detailsButton').on('click',function(event) {
 		event.preventDefault();
 		var href= $(this).attr('href');
-		$.get(href, function(country, status){
-			$('#idDetails').val(country.id);
-			$('#descriptionDetails').val(country.description);
-			$('#codeDetails').val(country.code);
-			$('#lastModifiedByDetails').val(country.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(country.lastModifiedDate.substr(0,19).replace("T", " "));
+		$.get(href, function(client, status){
+			$('#idDetails').val(client.id);
+			$('#descriptionDetails').val(client.description);
+			$('#codeDetails').val(client.code);
+			$('#createdByDeatils').val(client.createdBy);
+			$('#createdDateDetails').val(client.createdDate.substr(0,19).replace("T", " "));
+			$('#lastModifiedByDetails').val(client.lastModifiedBy);
+			$('#lastModifiedDateDetails').val(client.lastModifiedDate.substr(0,19).replace("T", " "));
 		});
 		$('#detailsModal').modal();
 	});

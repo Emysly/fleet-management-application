@@ -41,6 +41,8 @@ $('document').ready(function() {
 			$('#priceDetails').val(vehicleHire.price);
 			$('#remarksDetails').val(vehicleHire.remarks);
 			$('#ddlVehicleDetails').val(vehicleHire.vehicleid);
+			$('#createdByDetails').val(vehicleHire.createdBy);
+            $('#createdDateDetails').val(vehicleHire.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(vehicleHire.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(vehicleHire.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			

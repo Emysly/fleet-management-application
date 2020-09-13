@@ -36,12 +36,14 @@ $('document').ready(function() {
 	$('.table #detailsButton').on('click',function(event) {
 		event.preventDefault();		
 		var href= $(this).attr('href');		
-		$.get(href, function(vehicleType, status){
-			$('#idDetails').val(vehicleType.id);
-			$('#descriptionDetails').val(vehicleType.description);
-			$('#detailsDetails').val(vehicleType.details);
-			$('#lastModifiedByDetails').val(vehicleType.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(vehicleType.lastModifiedDate.substr(0,19).replace("T", " "));
+		$.get(href, function(vehicle, status){
+			$('#idDetails').val(vehicle.id);
+			$('#descriptionDetails').val(vehicle.description);
+			$('#detailsDetails').val(vehicle.details);
+			$('#createdByDetails').val(vehicle.createdBy);
+            $('#createdDateDetails').val(vehicle.createdDate.substr(0,19).replace("T", " "));
+			$('#lastModifiedByDetails').val(vehicle.lastModifiedBy);
+			$('#lastModifiedDateDetails').val(vehicle.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	

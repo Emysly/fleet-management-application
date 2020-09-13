@@ -21,6 +21,8 @@ $('document').ready(function(){
 			$('#idDetails').val(employeeType.id);
 			$('#descriptionDetails').val(employeeType.description);
 			$('#detailsDetails').val(employeeType.details);
+			$('#createdByDetails').val(employeeType.createdBy);
+            $('#createdDateDetails').val(employeeType.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(employeeType.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(employeeType.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			

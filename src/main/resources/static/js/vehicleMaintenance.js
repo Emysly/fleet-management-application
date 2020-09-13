@@ -39,6 +39,8 @@ $('document').ready(function() {
 			
 			$('#startDateDetails').val(startDate);
 			$('#endDateDetails').val(endDate);
+			$('#createdByDetails').val(vehicleMaintenance.createdBy);
+            $('#createdDateDetails').val(vehicleMaintenance.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(vehicleMaintenance.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(vehicleMaintenance.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			

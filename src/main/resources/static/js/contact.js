@@ -27,10 +27,10 @@ $('document').ready(function() {
 			$('#descriptionDetails').val(contact.description);
 			$('#codeDetails').val(contact.code);
 			$('#createdByDetails').val(contact.createdBy);
-			$('#createdDateDetails').val(contact.createdDate);
+			$('#createdDateDetails').val(contact.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(contact.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(contact.lastModifiedDate.substr(0,19).replace("T", " "));
-		});			
+		});
 		$('#detailsModal').modal();		
 	});	
 	

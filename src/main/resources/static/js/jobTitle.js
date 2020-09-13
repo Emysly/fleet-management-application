@@ -21,9 +21,11 @@ $('document').ready(function(){
 			$('#idDetails').val(jobTitle.id);
 			$('#descriptionDetails').val(jobTitle.description);
 			$('#detailsDetails').val(jobTitle.details);
+			$('#createdByDetails').val(jobTitle.createdBy);
+			$('#createdDateDetails').val(jobTitle.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(jobTitle.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(jobTitle.lastModifiedDate.substr(0,19).replace("T", " "));
-		});			
+		});
 		$('#detailsModal').modal();		
 	});	
 	

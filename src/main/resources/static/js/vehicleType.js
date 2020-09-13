@@ -25,6 +25,8 @@ $('document').ready(function(){
 			$('#addressDetails').val(vehicleType.address);
 			$('#ddlStateDetails').val(vehicleType.stateid);
 			$('#ddlCountryDetails').val(vehicleType.countryid);
+			$('#createdByDetails').val(vehicleType.createdBy);
+            $('#createdDateDetails').val(vehicleType.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(vehicleType.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(vehicleType.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			

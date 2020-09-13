@@ -26,12 +26,14 @@ $('document').ready(function() {
 	$('.table #detailsButton').on('click',function(event) {
 		event.preventDefault();		
 		var href= $(this).attr('href');		
-		$.get(href, function(country, status){
-			$('#idDetails').val(country.id);
-			$('#descriptionDetails').val(country.description);
-			$('#codeDetails').val(country.code);
-			$('#lastModifiedByDetails').val(country.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(country.lastModifiedDate.substr(0,19).replace("T", " "));
+		$.get(href, function(supplier, status){
+			$('#idDetails').val(supplier.id);
+			$('#descriptionDetails').val(supplier.description);
+			$('#codeDetails').val(supplier.code);
+			$('#createdByDetails').val(supplier.createdBy);
+            $('#createdDateDetails').val(supplier.createdDate.substr(0,19).replace("T", " "));
+			$('#lastModifiedByDetails').val(supplier.lastModifiedBy);
+			$('#lastModifiedDateDetails').val(supplier.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	

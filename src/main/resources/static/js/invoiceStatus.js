@@ -21,6 +21,8 @@ $('document').ready(function(){
 			$('#idDetails').val(invoiceStatus.id);
 			$('#descriptionDetails').val(invoiceStatus.description);
 			$('#detailsDetails').val(invoiceStatus.details);
+			$('#createdByDetails').val(invoiceStatus.createdBy);
+            $('#createdDateDetails').val(invoiceStatus.createdDate.substr(0,19).replace("T", " "));
 			$('#lastModifiedByDetails').val(invoiceStatus.lastModifiedBy);
 			$('#lastModifiedDateDetails').val(invoiceStatus.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
