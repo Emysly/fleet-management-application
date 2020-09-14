@@ -8,6 +8,7 @@
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <title>User Profile Page</title>
 
@@ -304,100 +305,101 @@
     </header>
     <!--header end-->
 
-    <!--sidebar start-->
-    <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" th:href="@{/index}">
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar" class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">
+                  <li class="active">
+                      <a class="" th:href="@{/index}">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="fas fa-truck"></i>
                           <span>Vehicles</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
-              <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
-              <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
+                          <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
+                          <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+                          <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
                           <span>Parameters</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
-              <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
-              <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
+                          <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
+                          <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
+                          <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="fas fa-users"></i>
                           <span>People</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/employees}">Employees</a></li>
-              <li><a class="" th:href="@{/clients}">Clients</a></li>
-              <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
-              <li><a class="" th:href="@{/users}">User</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/employees}">Employees</a></li>
+                          <li><a class="" th:href="@{/clients}">Clients</a></li>
+                          <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
+                          <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+                          <li><a class="" th:href="@{/users}">Users</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="fas fa-user-cog"></i>
                           <span>HR Settings</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
-            </ul>
-          </li>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
+                          <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+                      </ul>
+                  </li>
 
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="fas fa-file-invoice"></i>
                           <span>Accounts</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
-            </ul>
-          </li>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/invoices}">Invoices</a></li>
+                          <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+                      </ul>
+                  </li>
 
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="fas fa-globe"></i></i>
                           <span>Globals</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/countries}">Countries</a></li>
-              <li><a class="" th:href="@{/states}"><span>States</span></a></li>
-              <li><a class="" th:href="@{/locations}"><span>Locations</span></a></li>
+                      <ul class="sub">
+                          <li><a class="" th:href="@{/countries}">Countries</a></li>
+                          <li><a class="" th:href="@{/states}"><span>States</span></a></li>
+                          <li><a class="" th:href="@{/locations}"><span>Locations</span></a></li>
 
-            </ul>
-          </li>
+                      </ul>
+                  </li>
 
-        </ul>
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
-    <!--sidebar end-->
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
 
     <!--main content start-->
     <section id="main-content">
@@ -429,8 +431,8 @@
                   <p>@jenifersmith</p>
                   <p><i class="fa fa-twitter">jenifertweet</i></p>
                   <h6>
-                                    <span><i class="icon_clock_alt"></i>11:05 AM</span>
-                                    <span><i class="icon_calendar"></i>25.10.13</span>
+                                    <span th:text="${#dates.format(#dates.createNow(), 'hh:mm a')}"></span>
+                                    <span th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy')}"></span>
                                     <span><i class="icon_pin_alt"></i>NY</span>
                                 </h6>
                 </div>
@@ -500,7 +502,7 @@
                           <span class="arrow"></span>
                           <div class="text">
                             <a href="#" class="activity-img"><img class="avatar" src="img/chat-avatar.jpg" alt=""></a>
-                            <p class="attribution"><a href="#">Jonatanh Doe</a> at 4:25pm, 30th Octmber 2014</p>
+                            <p class="attribution"><a href="#">Jonatanh Doe</a> at 4:25pm, 30th October 2014</p>
                             <p>It is a long established fact that a reader will be distracted layout</p>
                           </div>
                         </div>
@@ -510,7 +512,7 @@
                           <span class="arrow"></span>
                           <div class="text">
                             <a href="#" class="activity-img"><img class="avatar" src="img/chat-avatar.jpg" alt=""></a>
-                            <p class="attribution"><a href="#">Jhon Loves </a> at 5:25am, 30th Octmber 2014</p>
+                            <p class="attribution"><a href="#">Jhon Loves </a> at 5:25am, 30th October 2014</p>
                             <p>Knowledge speaks, but wisdom listens.</p>
                           </div>
                         </div>
@@ -520,7 +522,7 @@
                           <span class="arrow"></span>
                           <div class="text">
                             <a href="#" class="activity-img"><img class="avatar" src="img/chat-avatar.jpg" alt=""></a>
-                            <p class="attribution"><a href="#">Rose Crack</a> at 5:25am, 30th Octmber 2014</p>
+                            <p class="attribution"><a href="#">Rose Crack</a> at 5:25am, 30th October 2014</p>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                           </div>
                         </div>
@@ -657,7 +659,7 @@
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">About Me</label>
-                            <div class="col-lg-10">
+                            <div class="col-lg-6">
                               <textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
                             </div>
                           </div>
@@ -717,19 +719,7 @@
         <!-- page end-->
       </section>
     </section>
-    <!--main content end-->
-    <div class="text-right">
-      <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </div>
-  </section>
+    </section>
   <!-- container section end -->
   <!-- javascripts -->
   <script src="js/jquery.js"></script>

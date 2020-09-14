@@ -3,8 +3,10 @@ package com.emysilva.fleet.management.application.service;
 import com.emysilva.fleet.management.application.exception.NoSuchDataException;
 import com.emysilva.fleet.management.application.model.Client;
 import com.emysilva.fleet.management.application.model.Employee;
+import com.emysilva.fleet.management.application.model.User;
 import com.emysilva.fleet.management.application.repository.ClientRepository;
 import com.emysilva.fleet.management.application.repository.EmployeeRepository;
+import com.emysilva.fleet.management.application.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,4 +33,9 @@ public class EmployeeService {
         Employee employeeToDelete = employeeRepository.findById(id).orElseThrow(() -> new NoSuchDataException("employee with id: " + id + "not found"));
         employeeRepository.delete(employeeToDelete);
     }
+
+    public Employee findByUsername(String username) {
+        return employeeRepository.findByUsername(username);
+    }
+
 }

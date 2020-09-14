@@ -8,6 +8,7 @@
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <title>Client Management Page</title>
 
@@ -49,7 +50,7 @@
         </div>
 
         <!--logo start-->
-        <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+        <a href="index.html" class="logo">Decagon <span class="lite">Fleet Company</span></a>
         <!--logo end-->
 
         <div class="nav search-row" id="top_menu">
@@ -276,7 +277,7 @@
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
                         <li class="border-top">
-                            <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            <a th:href="@{/profile}"><i class="icon_profile"></i> My Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -318,7 +319,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_document_alt"></i>
+                        <i class="fas fa-truck"></i>
                         <span>Vehicles</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
@@ -344,7 +345,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_desktop"></i>
+                        <i class="fas fa-users"></i>
                         <span>People</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
@@ -353,12 +354,12 @@
                         <li><a class="" th:href="@{/clients}">Clients</a></li>
                         <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
                         <li><a class="" th:href="@{/contacts}">Contacts</a></li>
-                        <li><a class="" th:href="@{/users}">User</a></li>
+                        <li><a class="" th:href="@{/users}">Users</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_desktop"></i>
+                        <i class="fas fa-user-cog"></i>
                         <span>HR Settings</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
@@ -370,7 +371,7 @@
 
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_desktop"></i>
+                        <i class="fas fa-file-invoice"></i>
                         <span>Accounts</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
@@ -382,7 +383,7 @@
 
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_documents_alt"></i>
+                        <i class="fas fa-globe"></i></i>
                         <span>Globals</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
@@ -487,13 +488,13 @@
                                     <div class="form-group row">
                                         <label for="txtNameAdd" class="col-sm-4 col-form-label">Name: </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="txtNameAdd" name="name" placeholder="Name">
+                                            <input type="text" class="form-control" id="txtNameAdd" name="name" placeholder="Name" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="txtDetailsAdd" class="col-sm-4 col-form-label">Details.: </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="txtDetailsAdd" name="details" placeholder="Details">
+                                            <input type="text" class="form-control" id="txtDetailsAdd" name="details" placeholder="Details" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -537,13 +538,13 @@
                                     <div class="form-group row">
                                         <label for="txtCityAdd" class="col-sm-4 col-form-label">City: </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="txtCityAdd" name="city" placeholder="City">
+                                            <input type="text" class="form-control" id="txtCityAdd" name="city" placeholder="City" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="txtPhoneAdd" class="col-sm-4 col-form-label">Phone: </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="txtPhoneAdd" name="phone" placeholder="Phone">
+                                            <input type="text" class="form-control" id="txtPhoneAdd" name="phone" placeholder="Phone" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -556,13 +557,12 @@
                                     <div class="form-group row">
                                         <label for="txtEmailAdd" class="col-sm-4 col-form-label">Email</label>
                                         <div class="col-sm-6">
-                                            <input type="email" class="form-control" id="txtEmailAdd" name="email" placeholder="Email">
+                                            <input type="email" class="form-control" id="txtEmailAdd" name="email" placeholder="Email" required>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                         </table>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
                     </form>
                 </div>
 

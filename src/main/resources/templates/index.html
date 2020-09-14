@@ -8,6 +8,7 @@
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="../static/img/favicon.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <title>Dashboard Page</title>
 
@@ -279,8 +280,8 @@
                         </a>
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
-              <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
+              <li class="border-top">
+                <a th:href="@{/profile}"><i class="icon_profile"></i> My Profile</a>
               </li>
               <li>
                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -316,16 +317,16 @@
         <ul class="sidebar-menu">
           <li class="active">
             <a class="" th:href="@{/index}">
-                          <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
-                      </a>
+              <i class="icon_house_alt"></i>
+              <span>Dashboard</span>
+            </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Vehicles</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="fas fa-truck"></i>
+              <span>Vehicles</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
@@ -335,10 +336,10 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>Parameters</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="icon_desktop"></i>
+              <span>Parameters</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
@@ -348,10 +349,10 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>People</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="fas fa-users"></i>
+              <span>People</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" th:href="@{/employees}">Employees</a></li>
               <li><a class="" th:href="@{/clients}">Clients</a></li>
@@ -362,10 +363,10 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>HR Settings</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="fas fa-user-cog"></i>
+              <span>HR Settings</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
               <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
@@ -374,22 +375,22 @@
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>Accounts</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="fas fa-file-invoice"></i>
+              <span>Accounts</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-              <li><a class="" th:href="@{/invoicestatuses}">Invoice Status Values</a></li>
+              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
             </ul>
           </li>
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Globals</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+              <i class="fas fa-globe"></i></i>
+              <span>Globals</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
             <ul class="sub">
               <li><a class="" th:href="@{/countries}">Countries</a></li>
               <li><a class="" th:href="@{/states}"><span>States</span></a></li>
@@ -420,44 +421,44 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
-              <i class="fa fa-cloud-download"></i>
-              <div class="count">6.674</div>
-              <div class="title">Download</div>
+              <i class="fas fa-truck-monster"></i>
+              <div class="count">Trucks</div>
+              <h3>120</h3>
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="info-box brown-bg">
-              <i class="fa fa-shopping-cart"></i>
-              <div class="count">7.538</div>
-              <div class="title">Purchased</div>
+              <i class="fas fa-car"></i>
+              <div class="count">Cars</div>
+              <h3>380</h3>
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
-              <i class="fa fa-thumbs-o-up"></i>
-              <div class="count">4.362</div>
-              <div class="title">Order</div>
+              <i class="fas fa-users"></i>
+              <div class="count">Employees</div>
+              <h3>30</h3>
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box green-bg">
-              <i class="fa fa-cubes"></i>
-              <div class="count">1.426</div>
-              <div class="title">Stock</div>
-            </div>
-            <!--/.info-box-->
-          </div>
+<!--          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">-->
+<!--            <div class="info-box green-bg">-->
+<!--              <i class="fa fa-cubes"></i>-->
+<!--              <div class="count">1.426</div>-->
+<!--              <div class="title">Stock</div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;/.info-box&ndash;&gt;-->
+<!--          </div>-->
           <!--/.col-->
 
         </div>
