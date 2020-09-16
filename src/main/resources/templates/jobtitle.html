@@ -56,6 +56,9 @@
                             </span>
                                   <span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Guest</span>
                               </a>
+                              <a th:href="@{/login}" style="margin: 10px">
+                                  Log Out
+                              </a>
                           </li>
                       </ul>
                   </div>
