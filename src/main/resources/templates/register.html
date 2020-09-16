@@ -47,7 +47,7 @@
         
        <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" placeholder="Firstname" autofocus name="firstname">
+          <input type="text" class="form-control" placeholder="Firstname" autofocus name="firstname" required>
         </div>
         
         <div class="input-group">
@@ -57,17 +57,17 @@
         
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" placeholder="Username" name="username" autofocus>
+          <input type="text" class="form-control" placeholder="Username" name="username" autofocus required>
         </div>
         
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+          <input type="password" class="form-control" placeholder="Password" id="password" name="password" pattern="{3,}">
         </div>
         
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPassword">
+          <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPassword" pattern="{3,}">
         </div>        
         
         <label class="checkbox">
