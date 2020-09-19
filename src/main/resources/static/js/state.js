@@ -13,8 +13,8 @@ $('document').ready(function() {
 			$('#capitalEdit').val(state.capital);
 			$('#codeEdit').val(state.code);
 			$('#nameEdit').val(state.name);
-			$('#detailsEdit').val(state.details);
-		});			
+			$('#descriptionEdit').val(state.description);
+		});
 		$('#editModal').modal();		
 	});
 	
@@ -27,12 +27,8 @@ $('document').ready(function() {
 			$('#nameDetails').val(state.name);
 			$('#codeDetails').val(state.code);
 			$('#capitalDetails').val(state.capital);
-			$('#detailsDetails').val(state.details);
-			$('#createdByDetails').val(state.createdBy);
-            $('#createdDateDetails').val(state.createdDate.substr(0,19).replace("T", " "));
-			$('#lastModifiedByDetails').val(state.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(state.lastModifiedDate.substr(0,19).replace("T", " "));
-		});			
+			$('#descriptionDetails').val(state.description);
+		});
 		$('#detailsModal').modal();		
 	});	
 	

@@ -99,7 +99,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -112,7 +112,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -124,7 +124,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                           </ul>
                       </li>
 
@@ -136,7 +136,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -264,7 +264,7 @@
 			       <option>-SELECT-</option>			    
 			       <option th:each="location : ${locations}"
 				        th:value="${location.id}"
-				        th:text="${location.description}">
+				        th:text="${location.city}">
 				   </option>
 			    </select>				    
 		  </div>
@@ -280,7 +280,7 @@
 			       <option>-SELECT-</option>			    
 			       <option th:each="location : ${locations}"
 				        th:value="${location.id}"
-				        th:text="${location.description}">
+				        th:text="${location.city}">
 				   </option>
 			    </select>			    
 		  </div>

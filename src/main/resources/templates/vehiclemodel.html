@@ -85,7 +85,7 @@
                           <ul class="sub">
                               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                               <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                           </ul>
                       </li>
@@ -99,7 +99,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -112,7 +112,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -124,7 +124,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                           </ul>
                       </li>
 
@@ -136,7 +136,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -188,13 +188,13 @@
                 <tbody>
                   <tr>
                     <th><i class="icon_table"></i> Id</th>
-                    <th><i class="icon_table"></i>Description</th>
+                    <th><i class="icon_table"></i>Name</th>
                     <th><i class="icon_table"></i> Details</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
 				 <tr th:each="vehicleModel:${vehicleModels}">
 					<td th:text="${vehicleModel.id}">Id</td>
-					<td th:text="${vehicleModel.description}">Description</td>
+					<td th:text="${vehicleModel.description}">Name</td>
 					<td th:text="${vehicleModel.details}">Details</td>				
                     <td>
                       <div class="btn-group">
@@ -237,7 +237,7 @@
           </div>
 
           <div class="form-group">
-            <label for="descriptionEdit" class="col-form-label">Description:</label>
+            <label for="descriptionEdit" class="col-form-label">Name:</label>
             <input type="text" class="form-control" id="descriptionAdd" name="description" required>
           </div>
           
@@ -274,7 +274,7 @@
           </div>
 
           <div class="form-group">
-            <label for="descriptionEdit" class="col-form-label">Description:</label>
+            <label for="descriptionEdit" class="col-form-label">Name:</label>
             <input type="text" class="form-control" id="descriptionEdit" name="description" required>
           </div>
           
@@ -297,7 +297,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Vehicle Model Details</h5>
+        <h5 class="modal-title" id="detailModalLabel">Vehicle Model Details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -310,7 +310,7 @@
           </div>
 
           <div class="form-group">
-            <label class="col-form-label">Description:</label>
+            <label class="col-form-label">Name:</label>
             <input type="text" class="form-control" id="descriptionDetails" name="description" readonly>
           </div>
           

@@ -18,18 +18,13 @@ public class InvoiceController {
     private InvoiceService invoiceService;
 
     @Autowired
-    private InvoiceStatusService invoiceStatusService;
-
-    @Autowired
     private ClientService clientService;
 
     @GetMapping("/invoices")
     public String getInvoices(Model model) {
         List<Invoice> invoices = invoiceService.getInvoices();
-        List<InvoiceStatus> invoiceStatuses = invoiceStatusService.getInvoiceStatuses();
         List<Client> clients = clientService.getClients();
         model.addAttribute("invoices", invoices);
-        model.addAttribute("invoiceStatuses", invoiceStatuses);
         model.addAttribute("clients", clients);
         return "invoice";
     }

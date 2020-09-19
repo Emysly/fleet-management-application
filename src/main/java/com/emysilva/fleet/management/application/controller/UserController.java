@@ -39,16 +39,4 @@ public class UserController {
         userService.addUser(user);
         return "redirect:/login";
     }
-
-    @RequestMapping(value = "/users/update", method = {RequestMethod.GET, RequestMethod.PUT})
-    public String updateUser(User user) {
-        userService.addUser(user);
-        return "redirect:/users";
-    }
-
-    @GetMapping("/users/delete")
-    public String deleteUser(int id) {
-        userService.deleteUser(id);
-        return "redirect:/users";
-    }
 }

@@ -85,7 +85,7 @@
                           <ul class="sub">
                               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                               <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                           </ul>
                       </li>
@@ -99,7 +99,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -112,7 +112,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -124,7 +124,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                           </ul>
                       </li>
 
@@ -136,7 +136,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -376,21 +376,10 @@
             <input type="text" class="form-control" id="idDetails" name="id" disabled>
           </div>
 
-          
-         <div class="form-group">
-		    <label for="ddlVehicleDetails" class="col-form-label">Vehicle: </label>
-			    <select class="form-control" id="ddlVehicleDetails" name="vehicleid">
-			       <option>-SELECT-</option>			    
-			       <option th:each="vehicle : ${vehicles}"
-				        th:value="${vehicle.id}"
-				        th:text="${vehicle.description}">
-				   </option>
-			    </select>				    
-		  </div>
          
           <div class="form-group">
             <label for="startDateDetails" class="col-form-label">Start Date:</label>
-            <input type="text" class="form-control" id="startDateDetails" name="startDate">
+            <input type="text" class="form-control" id="startDateDetails" name="startDate" readonly>
           </div>
           
           <div class="form-group">
@@ -400,24 +389,13 @@
           
           <div class="form-group">
             <label for="endDateDetails" class="col-form-label">End Date:</label>
-            <input type="date" class="form-control" id="endDateDetails" name="endDate"></input>
+            <input type="date" class="form-control" id="endDateDetails" name="endDate" readonly>
           </div> 
 
-
-         <div class="form-group">
-		    <label for="ddlSupplierDetails" class="col-form-label">Supplier: </label>
-			    <select class="form-control" id="ddlSupplierDetails" name="supplierid">
-			       <option>-SELECT-</option>			    
-			       <option th:each="supplier : ${suppliers}"
-				        th:value="${supplier.id}"
-				        th:text="${supplier.name}">
-				   </option>
-			    </select>				    
-		  </div>
           
           <div class="form-group">
             <label for="priceDetails" class="col-form-label">Price:</label>
-            <input type="text" class="form-control" id="priceDetails" name="price">
+            <input type="text" class="form-control" id="priceDetails" name="price" readonly>
           </div> 
 
       </div>

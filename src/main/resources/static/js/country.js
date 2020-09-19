@@ -23,11 +23,10 @@ $('document').ready(function(){
     		$.get(href, function(country, status){
     			$('#idDetails').val(country.id);
     			$('#descriptionDetails').val(country.description);
-    			$('#detailsDetails').val(country.details);
-    			$('#createdByDetails').val(country.createdBy);
-    			$('#createdDateDetails').val(country.createdDate.substr(0,19).replace("T", " "));
-    			$('#lastModifiedByDetails').val(country.lastModifiedBy);
-    			$('#lastModifiedDateDetails').val(country.lastModifiedDate.substr(0,19).replace("T", " "));
+    			$('#capitalDetails').val(country.capital);
+    			$('#codeDetails').val(country.code);
+    			$('#continentDetails').val(country.continent);
+    			$('#nationalityDetails').val(country.nationality);
     		});
     		$('#detailsModal').modal();
     	});
