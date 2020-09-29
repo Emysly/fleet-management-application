@@ -1,8 +1,11 @@
 package com.emysilva.fleet.management.application.controller;
 
 import com.emysilva.fleet.management.application.model.Country;
+import com.emysilva.fleet.management.application.model.Supplier;
+import com.emysilva.fleet.management.application.model.Vehicle;
 import com.emysilva.fleet.management.application.model.VehicleMaintenance;
 import com.emysilva.fleet.management.application.service.CountryService;
+import com.emysilva.fleet.management.application.service.SupplierService;
 import com.emysilva.fleet.management.application.service.VehicleMaintenanceService;
 import com.emysilva.fleet.management.application.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +21,20 @@ public class VehicleMaintenanceController {
 
     @Autowired
     private VehicleMaintenanceService vehicleMaintenanceService;
+    @Autowired
+    private VehicleService vehicleService;
+    @Autowired
+    private SupplierService supplierService;
 
 
     @GetMapping("/vehicleMaintenances")
     public String getVehicleMaintenances(Model model) {
         List<VehicleMaintenance> vehicleMaintenances = vehicleMaintenanceService.getVehicleMaintenances();
+        List<Vehicle> vehicles = vehicleService.getVehicles();
+        List<Supplier> suppliers = supplierService.getSuppliers();
         model.addAttribute("vehicleMaintenances", vehicleMaintenances);
+        model.addAttribute("vehicles", vehicles);
+        model.addAttribute("suppliers", suppliers);
         return "vehiclemaintenance";
     }
 

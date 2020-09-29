@@ -12,8 +12,6 @@ $('document').ready(function(){
 			$('#addressEdit').val(location.address);
 			$('#ddlStateEdit').val(location.stateid);
 			$('#ddlCountryEdit').val(location.countryid);
-			$('#descriptionEdit').val(location.description);
-			$('#detailsEdit').val(location.details);
 		});					
 		$('#editModal').modal();
 	});
@@ -23,16 +21,10 @@ $('document').ready(function(){
 		var href= $(this).attr('href');		
 		$.get(href, function(location, status){
 			$('#idDetails').val(location.id);
-			$('#descriptionDetails').val(location.description);
-			$('#detailsDetails').val(location.details);
 			$('#cityDetails').val(location.city);
 			$('#addressDetails').val(location.address);
 			$('#ddlStateDetails').val(location.stateid);
 			$('#ddlCountryDetails').val(location.countryid);
-			$('#createdByDetails').val(location.createdBy);
-            $('#createdDateDetails').val(location.createdDate.substr(0,19).replace("T", " "));
-			$('#lastModifiedByDetails').val(location.lastModifiedBy);
-			$('#lastModifiedDateDetails').val(location.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	

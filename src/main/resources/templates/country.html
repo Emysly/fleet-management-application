@@ -43,9 +43,8 @@
   <section id="container" class="">
     <!--header start-->
 
-      <header class="header  navbar-light bg-light" >
           <!--logo start-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B; position: fixed; width: 100%; z-index: 100; background: white">
               <a class="navbar-brand" href="#">Decagon Fleet Company</a>
               <div id="navbarText">
                   <div>
@@ -86,7 +85,7 @@
                           <ul class="sub">
                               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                               <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                           </ul>
                       </li>
@@ -100,7 +99,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -113,7 +112,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -125,7 +124,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                           </ul>
                       </li>
 
@@ -137,7 +136,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -183,7 +182,7 @@
                 <thead>
                   <tr>
                     <th><i class="icon_table"></i>id</th>
-                    <th><i class="icon_table"></i>Description</th>
+                    <th><i class="icon_table"></i>Nationality</th>
                     <th><i class="icon_table"></i>Capital</th>
                     <th><i class="icon_table"></i>Code</th>
                     <th><i class="icon_cogs"></i>Actions</th>
@@ -192,7 +191,7 @@
                 <tbody>
                   <tr th:each="country:${countries}">
                     <td th:text="${country.id}"></td>
-                    <td th:text="${country.description}"></td>
+                    <td th:text="${country.nationality}"></td>
                     <td th:text="${country.capital}"></td>
                     <td th:text="${country.code}"></td>
                     <td>
@@ -245,12 +244,12 @@
         
           <div class="form-group">
             <label for="add-recipient-capital" class="col-form-label">Capital:</label>
-            <input type="text" class="form-control" id="add-recipient-capital" name="capital" required pattern="[A-Za-z]+">
+            <input type="text" class="form-control" id="add-recipient-capital" name="capital" required>
           </div>
         
           <div class="form-group">
             <label for="add-recipient-code" class="col-form-label">Code:</label>
-            <input type="text" class="form-control" id="add-recipient-code" name="code" required pattern="[A-Za-z]{3}">
+            <input type="text" class="form-control" id="add-recipient-code" name="code" required>
           </div>
         
           <div class="form-group">
@@ -351,28 +350,23 @@
                       </div>
 
                       <div class="form-group">
-                          <label class="col-form-label">Details:</label>
-                          <input type="text" class="form-control" id="detailsDetails" name="details" readonly>
+                          <label class="col-form-label">Capital:</label>
+                          <input type="text" class="form-control" id="capitalDetails" name="capital" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label class="col-form-label">Created By:</label>
-                          <input type="text" class="form-control" id="createdByDetails" name="createdBy" readonly>
+                          <label class="col-form-label">Code:</label>
+                          <input type="text" class="form-control" id="codeDetails" name="code" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label class="col-form-label">Created On:</label>
-                          <input type="text" class="form-control" id="createdDateDetails" name="createdDate" readonly>
+                          <label class="col-form-label">Continent:</label>
+                          <input type="text" class="form-control" id="continentDetails" name="continent" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label class="col-form-label">Last Updated By:</label>
-                          <input type="text" class="form-control" id="lastModifiedByDetails" name="lastModifiedBy" readonly>
-                      </div>
-
-                      <div class="form-group">
-                          <label class="col-form-label">Last Updated On:</label>
-                          <input type="text" class="form-control" id="lastModifiedDateDetails" name="lastModifiedDate" readonly>
+                          <label class="col-form-label">Nationality:</label>
+                          <input type="text" class="form-control" id="nationalityDetails" name="nationality" readonly>
                       </div>
                   </div>
                   <div class="modal-footer">

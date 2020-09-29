@@ -43,9 +43,8 @@
   <section id="container" class="">
     <!--header start-->
 
-      <header class="header  navbar-light bg-light" >
           <!--logo start-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B; position: fixed; width: 100%; z-index: 100; background: white">
               <a class="navbar-brand" href="#">Decagon Fleet Company</a>
               <div id="navbarText">
                   <div>
@@ -86,7 +85,7 @@
                           <ul class="sub">
                               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                               <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                           </ul>
                       </li>
@@ -100,7 +99,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -113,7 +112,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -125,7 +124,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                           </ul>
                       </li>
 
@@ -137,7 +136,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -192,15 +191,13 @@
                     <th><i class="icon_table"></i> Id</th>
                     <th><i class="icon_table"></i>Date</th>
                     <th><i class="icon_table"></i> Client</th>
-                    <th><i class="icon_table"></i> Description</th>
                     <th><i class="icon_table"></i>Remarks</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
 				 <tr th:each="invoice:${invoices}">
 					<td th:text="${invoice.id}">Id</td>
 					<td th:text="${invoice.invoiceDate}">Invoice Date</td>
-					<td th:text="${invoice.client.name}">Client</td>	
-					<td th:text="${invoice.invoiceStatus.description}">Description</td>
+					<td th:text="${invoice.client.name}">Client</td>
 					<td th:text="${invoice.remarks}">Remarks</td>
                     <td>
                       <div class="btn-group">
@@ -267,14 +264,16 @@
           </div>          
           
          <div class="form-group">
-		    <label for="ddlInvoiceStatsAdd" class="col-form-label">Invoice Status: </label>
-			    <select class="form-control" id="ddlInvoiceStatusAdd" name="invoicestatusid">
+		    <label class="col-form-label">Invoice Status: </label>
+			    <select class="form-control">
 			       <option>-SELECT-</option>			    
-			       <option th:each="invoiceStatus : ${invoiceStatuses}"
-				        th:value="${invoiceStatus.id}"
-				        th:text="${invoiceStatus.description}">
-				   </option>
-			    </select>				    
+			       <option>Paid</option>
+			       <option>Disputed</option>
+			       <option>Partial</option>
+			       <option>Activated</option>
+			       <option>OverDue</option>
+			       <option>Draft</option>
+			    </select>
 		  </div>          
 
          <div class="form-group">
@@ -325,13 +324,15 @@
           </div>          
           
          <div class="form-group">
-		    <label for="ddlInvoiceStatusEdit" class="col-form-label">Invoice Status: </label>
-			    <select class="form-control" id="ddlInvoiceStatusEdit" name="invoicestatusid">
-			       <option>-SELECT-</option>			    
-			       <option th:each="invoiceStatus : ${invoiceStatuses}"
-				        th:value="${invoiceStatus.id}"
-				        th:text="${invoiceStatus.description}">
-				   </option>
+		    <label class="col-form-label">Invoice Status: </label>
+			    <select class="form-control">
+			       <option>-SELECT-</option>
+                    <option>Paid</option>
+                    <option>Disputed</option>
+                    <option>Partial</option>
+                    <option>Activated</option>
+                    <option>OverDue</option>
+                    <option>Draft</option>
 			    </select>				    
 		  </div>          
 

@@ -25,6 +25,8 @@ public class VehicleController {
     private VehicleStatusService vehicleStatusService;
     @Autowired
     private LocationService locationService;
+    @Autowired
+    private EmployeeService employeeService;
 
 
 
@@ -36,12 +38,14 @@ public class VehicleController {
         List<VehicleModel> vehicleModels = vehicleModelService.getVehicleModels();
         List<Location> locations = locationService.getLocations();
         List<VehicleStatus> vehicleStatuses = vehicleStatusService.getVehicleStatuses();
+        List<Employee> employees = employeeService.getEmployees();
         model.addAttribute("vehicles", vehicles);
         model.addAttribute("vehicleTypes", vehicleTypes);
         model.addAttribute("vehicleMakes", vehicleMakes);
         model.addAttribute("vehicleModels", vehicleModels);
         model.addAttribute("vehicleStatuses", vehicleStatuses);
         model.addAttribute("locations", locations);
+        model.addAttribute("employees", employees);
         return "vehicle";
     }
 

@@ -1,13 +1,7 @@
 package com.emysilva.fleet.management.application.controller;
 
-import com.emysilva.fleet.management.application.model.Location;
-import com.emysilva.fleet.management.application.model.Vehicle;
-import com.emysilva.fleet.management.application.model.VehicleHire;
-import com.emysilva.fleet.management.application.model.VehicleMovement;
-import com.emysilva.fleet.management.application.service.LocationService;
-import com.emysilva.fleet.management.application.service.VehicleHireService;
-import com.emysilva.fleet.management.application.service.VehicleMovementService;
-import com.emysilva.fleet.management.application.service.VehicleService;
+import com.emysilva.fleet.management.application.model.*;
+import com.emysilva.fleet.management.application.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +19,8 @@ public class VehicleHireController {
     private VehicleService vehicleService;
     @Autowired
     private LocationService locationService;
+    @Autowired
+    private ClientService clientService;
 
 
     @GetMapping("/vehicleHires")
@@ -32,9 +28,11 @@ public class VehicleHireController {
         List<VehicleHire> vehicleHires = vehicleHireService.getVehicleHires();
         List<Vehicle> vehicleServices = vehicleService.getVehicles();
         List<Location> locations = locationService.getLocations();
+        List<Client> clients = clientService.getClients();
         model.addAttribute("vehicleHires", vehicleHires);
         model.addAttribute("vehicleServices", vehicleServices);
         model.addAttribute("locations", locations);
+        model.addAttribute("clients", clients);
         return "vehiclehire";
     }
 

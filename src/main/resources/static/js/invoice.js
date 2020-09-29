@@ -12,24 +12,22 @@ $('document').ready(function() {
 			
 			var invoiceDate = invoice.invoiceDate.substr(0,10);
 			$('#invoiceDateEdit').val(invoiceDate);
-			
-			$('#ddlInvoiceStatusEdit').val(invoice.invoicestatusid);
+
 			$('#remarksEdit').val(invoice.remarks);
 		});			
 		$('#editModal').modal();		
 	});
 	
 	$('.table #detailsButton').on('click',function(event) {
-		event.preventDefault();		
-		var href= $(this).attr('href');		
+		event.preventDefault();
+		var href= $(this).attr('href');
 		$.get(href, function(invoice, status){
 			$('#idDetails').val(invoice.id);
 			$('#ddlClientDetails').val(invoice.clientid);
 			$('#invoiceDateDetails').val(invoice.invoiceDate.substr(0,10));
-			$('#ddlStatusDetails').val(invoice.invoicestatusid);
 			$('#remarksDetails').val(invoice.remarks);
 		});			
-		$('#detailsModal').modal();		
+		$('#detailsModal').modal();
 	});	
 	
 	$('.table #deleteButton').on('click',function(event) {

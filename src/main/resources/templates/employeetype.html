@@ -43,9 +43,8 @@
   <section id="container" class="">
     <!--header start-->
 
-      <header class="header  navbar-light bg-light" >
           <!--logo start-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B; position: fixed; width: 100%; z-index: 100; background: white">
               <a class="navbar-brand" href="#">Decagon Fleet Company</a>
               <div id="navbarText">
                   <div>
@@ -85,7 +84,7 @@
                           <ul class="sub">
                               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                               <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                           </ul>
                       </li>
@@ -99,7 +98,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -112,7 +111,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -136,7 +135,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -190,13 +189,13 @@
                 <tbody>
                   <tr>
                     <th><i class="icon_table"></i> Id</th>
-                    <th><i class="icon_table"></i>Description</th>
+                    <th><i class="icon_table"></i>Name</th>
                     <th><i class="icon_table"></i> Details</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
 				 <tr th:each="employeeType:${employeeTypes}">
 					<td th:text="${employeeType.id}">Id</td>
-					<td th:text="${employeeType.description}">Description</td>
+					<td th:text="${employeeType.description}">Name</td>
 					<td th:text="${employeeType.details}">Details</td>				
                     <td>
                       <div class="btn-group">
@@ -242,7 +241,7 @@
           </div>
 
           <div class="form-group">
-            <label for="descriptionEdit" class="col-form-label">Description:</label>
+            <label for="descriptionEdit" class="col-form-label">Name:</label>
             <input type="text" class="form-control" id="descriptionAdd" name="description" required>
           </div>
           
@@ -279,8 +278,8 @@
           </div>
 
           <div class="form-group">
-            <label for="descriptionEdit" class="col-form-label">Description:</label>
-            <input type="text" class="form-control" id="descriptionEdit" name="description" required>
+            <label for="descriptionEdit" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="descriptionEdit" name="description">
           </div>
           
           <div class="form-group">
@@ -315,7 +314,7 @@
           </div>
 
           <div class="form-group">
-            <label class="col-form-label">Description:</label>
+            <label class="col-form-label">Name:</label>
             <input type="text" class="form-control" id="descriptionDetails" name="description" readonly>
           </div>
 

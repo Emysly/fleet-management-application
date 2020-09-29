@@ -42,9 +42,8 @@
   <!-- container section start -->
   <section id="container" class="">
     <!--header start-->
-      <header class="header  navbar-light bg-light" >
           <!--logo start-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B; position: fixed; width: 100%; z-index: 100; background: white">
               <a class="navbar-brand" href="#">Decagon Fleet Company</a>
               <div id="navbarText">
                   <div>
@@ -85,7 +84,7 @@
                       <ul class="sub">
                           <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                           <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                          <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                          <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                           <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                       </ul>
                   </li>
@@ -99,7 +98,7 @@
                           <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                           <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                           <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                          <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                          <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -124,7 +123,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                          <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                          <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                       </ul>
                   </li>
 
@@ -136,7 +135,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                          <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                          <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                       </ul>
                   </li>
 
@@ -198,7 +197,7 @@
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" id="editButton" th:href="@{/contacts/findById/(id=${contact.id})}"><i class="icon_pencil-edit"></i></a>
-                        <a class="btn btn-success" id="detailsButton" th:href="@{/contacts/findById/(id=${contact.id})}"><i class="icon_document_alt"></i></a>
+<!--                        <a class="btn btn-success" id="detailsButton" th:href="@{/contacts/findById/(id=${contact.id})}"><i class="icon_document_alt"></i></a>-->
                         <a class="btn btn-danger" id="deleteButton" th:href="@{/contacts/delete/(id=${contact.id})}"><i class="icon_close_alt2"></i></a>
                       </div>
                     </td>

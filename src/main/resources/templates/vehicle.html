@@ -43,9 +43,8 @@
   <section id="container" class="">
     <!--header start-->
 
-	  <header class="header  navbar-light bg-light" >
 		  <!--logo start-->
-		  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B">
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B; position: fixed; width: 100%; z-index: 100; background: white">
 			  <a class="navbar-brand" href="#">Decagon Fleet Company</a>
 			  <div id="navbarText">
 				  <div>
@@ -85,7 +84,7 @@
 						  <ul class="sub">
 							  <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
 							  <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-							  <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--							  <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
 							  <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
 						  </ul>
 					  </li>
@@ -99,7 +98,7 @@
 							  <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
 							  <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
 							  <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-							  <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--							  <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
 						  </ul>
 					  </li>
 					  <li class="sub-menu">
@@ -112,7 +111,7 @@
 							  <li><a class="" th:href="@{/employees}">Employees</a></li>
 							  <li><a class="" th:href="@{/clients}">Clients</a></li>
 							  <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-							  <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--							  <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
 							  <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
 						  </ul>
 					  </li>
@@ -124,7 +123,7 @@
 						  </a>
 						  <ul class="sub">
 							  <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-							  <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--							  <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
 						  </ul>
 					  </li>
 
@@ -308,8 +307,8 @@
 		        	       <option>-SELECT-</option>			    					    
 					       <option th:each="location : ${locations}"
 						        th:value="${location.id}"
-						        th:text="${location.description}">
-						   </option>				    
+						        th:text="${location.city}">
+						   </option>
 						</select>
 					</div>
 				  </div>
@@ -353,25 +352,6 @@
 						   </option>
 						</select>					    
 					</div>
-				  </div>
-				  <div class="form-group row">
-				    <label for="ddlCurrentStatusAdd" class="col-sm-4 col-form-label">Current Status</label>
-				    <div class="col-sm-6">
-					    <select class="form-control" id="ddlCurrentStatusAdd" name="vehiclestatusid">
-			               <option>-SELECT-</option>			    					    
-					       <option th:each="vehicleStatus : ${vehicleStatuses}"
-						        th:value="${vehicleStatus.id}"
-						        th:text="${vehicleStatus.description}">
-						   </option>
-					    </select>				    
-				    </div>
-				  </div>
-				  <d
-				  iv class="form-group row">
-				    <label for="flpImageAdd" class="col-sm-4 col-form-label">Select Image: </label>
-				    <div class="col-sm-6">
-				      <input type="file" class="form-control-file" id="fupImageAdd" name="photo" placeholder="Select File">
-				    </div>
 				  </div>
 				</td>
 			</tr>

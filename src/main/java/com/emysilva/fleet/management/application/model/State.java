@@ -32,7 +32,7 @@ public class State {
 	private Country country;
 	
 	private Integer countryid;
-	
-	private String details;
+
+	private String description;
 	
 }

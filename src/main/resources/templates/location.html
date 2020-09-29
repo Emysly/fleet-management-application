@@ -43,10 +43,9 @@
   <section id="container" class="">
     <!--header start-->
 
-      <header class="header  navbar-light bg-light" >
           <!--logo start-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B">
-              <a class="navbar-brand" href="#">Decagon Fleet Company</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 5px 10px #00008B; position: fixed; width: 100%; z-index: 100; background: white">
+              <a class="navbar-brand" th:href="@{/index}">Decagon Fleet Company</a>
               <div id="navbarText">
                   <div>
                       <ul class="navbar-nav" style="float: right; margin: 10px;">
@@ -86,7 +85,7 @@
                           <ul class="sub">
                               <li><a class="" th:href="@{/vehicles}">Vehicle Data</a></li>
                               <li><a class="" th:href="@{/vehicleMaintenances}">Maintenance</a></li>
-                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleMovements}">Movements</a></li>-->
                               <li><a class="" th:href="@{/vehicleHires}">Hires</a></li>
                           </ul>
                       </li>
@@ -100,7 +99,7 @@
                               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
                               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
                               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>-->
                           </ul>
                       </li>
                       <li class="sub-menu">
@@ -113,7 +112,7 @@
                               <li><a class="" th:href="@{/employees}">Employees</a></li>
                               <li><a class="" th:href="@{/clients}">Clients</a></li>
                               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>
+<!--                              <li><a class="" th:href="@{/contacts}">Contacts</a></li>-->
                               <!--                          <li><a class="" th:href="@{/users}">Users</a></li>-->
                           </ul>
                       </li>
@@ -125,7 +124,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+<!--                              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>-->
                           </ul>
                       </li>
 
@@ -137,7 +136,7 @@
                           </a>
                           <ul class="sub">
                               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>
+<!--                              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>-->
                           </ul>
                       </li>
 
@@ -211,17 +210,7 @@
 <!-- page end-->
       </section>
     </section>
-    <!--main content end-->
-    <div class="text-right">
-      <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-        </div>
-    </div>
+
   </section>
   <!-- container section end -->
   
@@ -244,18 +233,13 @@
           </div>
           
           <div class="form-group">
-            <label for="descriptionEdit" class="col-form-label">Description:</label>
-            <input type="text" class="form-control" id="descriptionAdd" name="description" required>
-          </div>
-          
-          <div class="form-group">
             <label for="cityAdd" class="col-form-label">City:</label>
             <input type="text" class="form-control" id="cityAdd" name="city" required>
           </div>
           
           <div class="form-group">
-            <label for="detailsAdd" class="col-form-label">Address:</label>
-            <textarea type="text" class="form-control" id="addressAdd" name="address"></textarea>
+            <label for="addressAdd" class="col-form-label">Address:</label>
+              <input type="text" class="form-control" id="addressAdd" name="address" required>
           </div> 
           
          <div class="form-group">
@@ -264,7 +248,7 @@
 			       <option>-SELECT-</option>			    
 			       <option th:each="country : ${countries}"
 				        th:value="${country.id}"
-				        th:text="${country.description}">
+				        th:text="${country.nationality}">
 				   </option>
 			    </select>				    
 		  </div>
@@ -279,11 +263,7 @@
 				   </option>
 			    </select>				    
 		  </div>
-          
-          <div class="form-group">
-            <label for="detailsAdd" class="col-form-label">Details:</label>
-            <input type="text" class="form-control" id="detailsAdd" name="details">
-          </div>        
+
       </div>
 
       <div class="modal-footer">
@@ -310,31 +290,26 @@
           <div class="form-group">
             <input type="hidden" class="form-control" id="idEdit" name="id" readonly>
           </div>
-
-         <div class="form-group">
-            <label for="descriptionEdit" class="col-form-label">Description:</label>
-            <input type="text" class="form-control" id="descriptionEdit" name="description" required>
-          </div>
           
           <div class="form-group">
             <label for="cityEdit" class="col-form-label">City:</label>
-            <input type="text" class="form-control" id="cityEdit" name="city" required>
+            <input type="text" class="form-control" id="cityEdit" name="city">
           </div>
           
           <div class="form-group">
-            <label for="detailsEdit" class="col-form-label">Address:</label>
-            <textarea type="text" class="form-control" id="addressEdit" name="address"></textarea>
+            <label for="addressEdit" class="col-form-label">Address:</label>
+              <input type="text" class="form-control" id="addressEdit" name="address">
           </div> 
-          
+
          <div class="form-group">
 		    <label for="ddlCountryEdit" class="col-form-label">Country: </label>
 			    <select class="form-control" id="ddlCountryEdit" name="countryid">
 			       <option>-SELECT-</option>
 			       <option th:each="country : ${countries}"
 				        th:value="${country.id}"
-				        th:text="${country.description}">
+				        th:text="${country.nationality}">
 				   </option>
-			    </select>				    
+			    </select>
 		  </div>
 
          <div class="form-group">
@@ -347,11 +322,7 @@
 				   </option>
 			    </select>				    
 		  </div>
-          
-          <div class="form-group">
-            <label for="detailsAdd" class="col-form-label">Details:</label>
-            <input type="text" class="form-control" id="detailsEdit" name="details">
-          </div>        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -377,68 +348,17 @@
           <div class="form-group">
             <input type="hidden" class="form-control" id="idDetails" name="id" readonly>
           </div>
-
-         <div class="form-group">
-            <label for="descriptionDetails" class="col-form-label">Description:</label>
-            <input type="text" class="form-control" id="descriptionDetails" name="description" required>
-          </div>
           
           <div class="form-group">
             <label for="cityDetails" class="col-form-label">City:</label>
-            <input type="text" class="form-control" id="cityDetails" name="city" required>
+            <input type="text" class="form-control" id="cityDetails" name="city" readonly>
           </div>
           
           <div class="form-group">
-            <label for="detailsDetails" class="col-form-label">Address:</label>
-            <textarea type="text" class="form-control" id="addressDetails" name="address"></textarea>
-          </div> 
-          
-         <div class="form-group">
-		    <label for="ddlCountryDetails" class="col-form-label">Country: </label>
-			    <select class="form-control" id="ddlCountryDetails" name="countryid">
-			       <option>-SELECT-</option>			    
-			       <option th:each="country : ${countries}"
-				        th:value="${country.id}"
-				        th:text="${country.description}">
-				   </option>
-			    </select>				    
-		  </div>
-
-         <div class="form-group">
-		    <label for="ddlStateDetails" class="col-form-label">State: </label>
-			    <select class="form-control" id="ddlStateDetails" name="stateid">
-			       <option>-SELECT-</option>			    
-			       <option th:each="state : ${states}"
-				        th:value="${state.id}"
-				        th:text="${state.name}">
-				   </option>
-			    </select>				    
-		  </div>
-          
-          <div class="form-group">
-            <label for="detailsAdd" class="col-form-label">Details:</label>
-            <input type="text" class="form-control" id="detailsDetails" name="details">
+            <label for="addressDetails" class="col-form-label">Address:</label>
+              <input type="text" class="form-control" id="addressDetails" name="address" readonly>
           </div>
 
-          <div class="form-group">
-              <label class="col-form-label">Created By:</label>
-              <input type="text" class="form-control" id="createdByDetails" name="createdBy" readonly>
-          </div>
-
-          <div class="form-group">
-              <label class="col-form-label">Created On:</label>
-              <input type="text" class="form-control" id="createdDateDetails" name="createdDate" readonly>
-          </div>
-
-          <div class="form-group">
-            <label class="col-form-label">Last Updated By:</label>
-            <input type="text" class="form-control" id="lastModifiedByDetails" name="lastModifiedByDetails" readonly>
-          </div>        
-          
-          <div class="form-group">
-            <label class="col-form-label">Last Updated On:</label>
-            <input type="text" class="form-control" id="lastModifiedDateDetails" name="lastModifiedDateDatails" readonly>
-          </div>  
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

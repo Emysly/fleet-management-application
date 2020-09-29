@@ -10,8 +10,6 @@
 
 @import url(line-icons.css);
 
-
-
 body {
 
     color: #797979;
@@ -1936,9 +1934,7 @@ div[data-role="editor-toolbar"] {
 
   color : #768399;
 
-  background : #fff;
-
-  background-color : #fff;
+    background: #fff;
 
 }
 
@@ -1946,9 +1942,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #d95043;
-
-  background-color : #d95043;
+    background: #d95043;
 
 }
 
@@ -1956,9 +1950,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #57889c;
-
-  background-color : #57889c;
+    background: #00008B;
 
 }
 
@@ -1966,9 +1958,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #26c281;
-
-  background-color : #26c281;
+    background: #26c281;
 
 }
 
@@ -1976,9 +1966,7 @@ div[data-role="editor-toolbar"] {
 
   color: #71843f;
 
-  background: #71843f;
-
-  background-color: #71843f;
+    background: #71843f;
 
 }
 
@@ -1986,9 +1974,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #fc6;
-
-  background-color : #fc6;
+    background: #fc6;
 
 }
 
@@ -1996,9 +1982,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #f4b162;
-
-  background-color : #f4b162;
+    background: #f4b162;
 
 }
 
@@ -2006,9 +1990,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #af91e1;
-
-  background-color : #af91e1;
+    background: #af91e1;
 
 }
 
@@ -2016,9 +1998,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #f78db8;
-
-  background-color : #f78db8;
+    background: #f78db8;
 
 }
 
@@ -2026,9 +2006,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #a8db43;
-
-  background-color : #a8db43;
+    background: #a8db43;
 
 }
 
@@ -2036,9 +2014,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #e65097;
-
-  background-color : #e65097;
+    background: #e65097;
 
 }
 
@@ -2046,9 +2022,7 @@ div[data-role="editor-toolbar"] {
 
   color : #fff;
 
-  background : #97d3c5;
-
-  background-color : #97d3c5;
+    background: #97d3c5;
 
 }
 
