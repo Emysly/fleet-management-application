@@ -45,16 +45,16 @@ jobs:
     needs: [ build-test ]
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v1
-      - name: Download built package from build-test job
-        uses: actions/download-artifact@v2
-        with:
-          name: Package
-      - name: Deploy artifact if pushed to master and previous job [build-test] was successful
-        run: |
-          pwd
-          ls
-          echo "$SECRET" > ./secretfile
-          cat ./secretfile
-        env:
-          SECRET: ${{ secrets.SECRET }} # url to ec2 instance e.g blahblah.com
+    - uses: actions/checkout@v1
+    - name: Download built package from build-test job
+      uses: actions/download-artifact@v2
+      with:
+        name: Package
+    - name: Deploy artifact if pushed to master and previous job [build-test] was successful
+      run: |
+        pwd
+        ls
+        echo "$SECRET" > ./secretfile
+        cat ./secretfile
+      env:
+        SECRET: ${{ secrets.SECRET }} # url to ec2 instance e.g blahblah.com
